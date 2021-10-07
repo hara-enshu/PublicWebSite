@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel = "stylesheet" href="HomeTest.css">
+</head>
+<body>
+    
+    <h1>イベント開催情報地図マッピング</h1>
+    このウェブサイトでは愛媛県内のイベントを表示します。
+    <ul>
+        <li>地域選択ではボタンを押すことでその地域に移動します。</li>
+        <li>シャンル検索では選択したジャンルのイベントのみを表示します。</li>
+        <li>日付検索ではその期間のイベントのみを表示します。</li>
+    </ul>
+
+    <!--地域選択の検索窓-->
+    <div id="layout01">
+        <div id="layout01_01">
+            <form class="tiiki" method="post" action="http://radio-button-sample.com/handler.php">
+                <fieldset>
+                    <legend class="form-title">地域選択</legend>
+                    <label>
+                        <input type="radio" name="tiiki" value="shikokuchuou">四国中央市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="niihama">新居浜市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="saijo">西条市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="imabari">今治市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="matsuyama"checked>松山市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="touon">東温市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="iyo">伊予市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="oosu">大洲市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="yawatahama">八幡浜市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="seiyo">西予市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="uwazima">宇和島市
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="matsumae">松前町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="tobe">砥部町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="uchiko">内子町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="ikata">伊方町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="kihoku">鬼北町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="matsuno">松野町
+                    </label><br>
+                    <label>
+                        <input type="radio" name="tiiki" value="ainan">愛南町
+                    </label><br>
+                </fieldset>
+            </form>
+        </div>
+
+        <!--ジャンル選択の検索窓-->
+        <div id="layout01_02">
+            <form class="genre" method="post" action="http://api.www-creators.com/sample/checkbox.php">
+                <fieldset>
+                    <legend>ジャンル検索</legend>
+
+                    <label>
+                        <input type="checkbox" name="genre" value="kouza">口座・講演
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="ongaku">音楽
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="eiga">映画
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="butai">舞台
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="sports">スポーツ
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="tenrankai">展覧会
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="genre" value="sonota">その他
+                    </label><br>
+                </fieldset>
+            </form>
+        </div>
+
+        <!--日付検索の選択窓-->
+        <div id="layout01_03">
+            <form class="date" method="post">
+                <fieldset>
+                    <legend>日付検索</legend>
+                    <label>
+                        <input type="date" value="date1">～
+                    </label><br>
+                    <label>
+                        <input type="date" value="date2">
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!--地図表示-->
+    <div id="layout02">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+              crossorigin="" />
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                crossorigin=""></script>
+        <div id="mapid"></div>
+    </div>
+    <script src="MapDisplay.js"></script>
+    
+</body>
+</html>

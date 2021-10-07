@@ -1,0 +1,41 @@
+/* タイトル */
+h1{
+    color: #364e96;/*文字色*/
+    border: solid 3px #364e96;/*線色*/
+    padding: 0.5em;/*文字周りの余白*/
+    border-radius: 0.5em;/*角丸*/
+}
+
+/* 検索窓全体 */
+#layout01 {
+    width: 180px;
+    height: auto;
+    float: left;
+}
+
+/* 地域選択 */
+#layout01_01 {
+    width: 180px;
+    height: auto;
+}
+
+/* ジャンル検索 */
+#layout01_02 {
+    width: 180px;
+    height: auto;
+}
+
+/* 日付検索 */
+#layout01_03 {
+    width: 180px;
+    height: auto; 
+}
+
+/* 地図 */
+#mapid {
+    height: 80.7vh;
+    position:relative;
+    top:11px;
+    padding: 1px;
+    border: 1px solid black;
+}
