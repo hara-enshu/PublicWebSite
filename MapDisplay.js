@@ -18,7 +18,7 @@ function MoveSaijo(){       //西条市
 function MoveImabari(){     //今治市
     map.setView([34.066202, 132.997791]);
 }
-function MoveMatsuyama(){   //松山市
+function MoveMatsuyama(){   //松山
     map.setView([33.839165, 132.76564]);
 }
 
